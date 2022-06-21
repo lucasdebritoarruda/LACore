@@ -9,6 +9,8 @@ import Foundation
 
 final public class NetworkService: NetworkServiceProtocol {
     
+    public init() {}
+    
     public func request<Request: DataRequest>(_ request: Request, completion: @escaping (Result<Request.Response, Error>) -> Void) {
     
         guard var urlComponent = URLComponents(string: request.url) else {
